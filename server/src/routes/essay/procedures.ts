@@ -1,7 +1,7 @@
-import { Elysia, t } from "elysia";
-import { genRanId } from "./utils/crypto";
+import { t } from "elysia";
+import { app } from "../..";
+import { genRanId } from "../../utils/crypto";
 
-export const app = new Elysia();
 
 app.post(
     "/essay",
@@ -23,5 +23,3 @@ app.get(
     "/essay/:id",
     () => {},
 );
-
-app.listen(50451, server => console.log(`🦊 Elysia is running at ${server?.hostname}:${server?.port}`));
